@@ -27,16 +27,17 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-let arr=[]
-let y
-  for (const x in obj){
- y=`Customer Name :${x} , Age :${obj[x]}`;
-arr.push(y);
+let arr=[] 
+let y 
+  for (const x in obj){ 
+ y=`Customer Name :${x} , Age :${obj[x]}`; 
+arr.push(y); 
 
-
-  }
-  return arr;
+ 
+  } 
+  return arr; 
   // write your code here
+  
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -62,11 +63,20 @@ arr.push(y);
 // You can solve this challenge by using Object.entries
 
 const getEntries = (obj) => {
+  let arr=[];
+  let x;
+  // write your code here
+  for (const [key,value] of Object.entries(obj)){
+x=`${key}: ${value}`
+arr.push(x);
 
+  }
+  return arr
+};
   // write your code here
  
 
-};
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
