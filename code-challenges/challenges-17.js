@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 01:
@@ -6,7 +6,7 @@
 //
 // referring to the given examples find out the pattern used and
 // Write a function that takes 2 integers and prints the patterns using recursion
-// 
+//
 // Input: 16, 5
 // Output: [16, 11, 6, 1, -4, 1, 6, 11, 16]
 //
@@ -15,35 +15,33 @@
 //
 
 const recursionPattern = (int1, int2) => {
-  
-        let newArr=[]
-          newArr.push(int1)
-        
-        function recR(h,j){
-          const c=h-j
-            if(c<0){
-                j=-j
-            }
-                if(c===int1){
-                newArr.push(c)
-                return
-          }
-            newArr.push(c)
-            recR(c,j)
-          }
-          recR(int1,int2)
-          return newArr
-        
-        }
-        
-    // write your code here
+  let newArr = [];
+  newArr.push(int1);
+
+  function recR(h, j) {
+    const c = h - j;
+    if (c < 0) {
+      j = -j;
+    }
+    if (c === int1) {
+      newArr.push(c);
+      return;
+    }
+    newArr.push(c);
+    recR(c, j);
+  }
+  recR(int1, int2);
+  return newArr;
+};
+
+// write your code here
 
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02:
 // Required:
-// 
+//
 // Write a function that takes a string (HTML tag)
 // and extracts the link from the HTML tag
 //
@@ -52,64 +50,59 @@ const recursionPattern = (int1, int2) => {
 //
 // Note:
 //  Assume that links end with .com, .org or .net
-// 
+//
 
 const filterLinks = (str) => {
-    // write your code here
-    let y=str.substring(str.indexOf('w'),str.lastIndexOf('"'))
+  // write your code here
+  let y = str.substring(str.indexOf("w"), str.lastIndexOf('"'));
 
-    return y
-}
+  return y;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 03:
 // Required:
-// 
+//
 // A phrase is considered palindrome if, after converting all uppercase letters into lowercase letters
 // and removing all non-alphanumeric characters, it reads the same forward and backward.
 // Alphanumeric characters include letters and numbers.
 // Given a string s, return true if it is a palindrome, or false otherwise.
-// 
+//
 // Input: s = "A man, a plan, a canal: Panama"
 // Output: true
 // as you can see "amanaplanacanalpanama" is a palindrome.
 //
 
 const isPalindrome = (str) => {
-    // write your code here
-   let y= str.toLowerCase();
+  // write your code here
+  let y = str.toLowerCase();
 
-    const x = y.replace(/[^a-z0-9]/gi, '');
-    let emptyStr="";
-    let counter=x.length-1
-  
-  for(let i=0;i<x.length;i++){
-    if(x[counter]===x[i]){
-  
-  emptyStr+=x[counter]
-     
-      counter--
-      
-    }else{
-    return false
+  const x = y.replace(/[^a-z0-9]/gi, "");
+  let emptyStr = "";
+  let counter = x.length - 1;
+
+  for (let i = 0; i < x.length; i++) {
+    if (x[counter] === x[i]) {
+      emptyStr += x[counter];
+
+      counter--;
+    } else {
+      return false;
     }
-  
-  
-      
-    }
-    return true
   }
+  return true;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 04:
 // Optional:
-// 
+//
 //  Write a function that takes 2 arguments, one is a string and the other is an array
 //  the function should return a boolean than indicates if both have the same pattern
 //
-//  EX: 
+//  EX:
 //  Input: "abba", ['cat', 'dog', 'dog', 'cat']
 //  output: true
 //
@@ -122,9 +115,8 @@ const isPalindrome = (str) => {
 //
 
 const samePattern = (str, arr) => {
-    // write your code here
-}
+  // write your code here
+};
 // -------------------------------------------------------------------------------------------------------
-
 
 module.exports = { recursionPattern, filterLinks, isPalindrome, samePattern };
