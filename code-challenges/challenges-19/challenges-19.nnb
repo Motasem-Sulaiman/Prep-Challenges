@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function appendAndDelete(s, t, k) {\n    let y=s.split('');\n    let x=y.split('')\n  \n  \n    \n  \n  }"
+                "\nfunction appendAndDelete(s, t, k) {\n  let count1=0;\n  let   count2=0;\n  if((s.length+t.length)<k){\n  \n    return \"Yes\"\n  }\n    while(s[count1]===t[count2])\n      {\n  \n        count1++\n        count2++\n      }\n   let count3=s.length-count1\n    let count4=t.length-count2\n    if(k<count3||k<count4){\n  \n      return \"No\"\n    }\n  if(k===(count3+count4)){\n  \n  \n    return \"Yes\"\n  }\n    else{\n  \n      return \"No\"\n    }\n  \n  \n    \n  \n  }"
             ],
             "outputs": []
         },
